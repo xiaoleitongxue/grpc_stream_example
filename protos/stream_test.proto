@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+
+
+
+package streamtest;
+
+service StreamTest{
+    rpc send_image(stream Image) returns (Image) {}
+}
+
+message Image{
+    float pixel  = 5;
+}
